@@ -13,3 +13,6 @@ output/
 
 # drafts
 drafts/
+
+# MacOS
+.DS_Store
