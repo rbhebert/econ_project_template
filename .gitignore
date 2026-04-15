@@ -2,17 +2,17 @@
 # Authored by Reginald B. Hebert 15Apr2026
 
 # Main data  
-#data/cleaned/
-#data/raw/
+data/cleaned/
+data/raw/
 
 # Temp data  
-#data/temp
+data/temp
 
 # Output 
-#output/
+output/
 
 # drafts
-#drafts/
+drafts/
 
 # MacOS
 .DS_Store
