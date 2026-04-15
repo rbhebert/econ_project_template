@@ -1,0 +1,15 @@
+# .gitignore file for economics projects
+# Authored by Reginald B. Hebert 15Apr2026
+
+# Main data  
+data/cleaned/
+data/raw/
+
+# Temp data  
+data/temp
+
+# Output 
+output/
+
+# drafts
+drafts/
