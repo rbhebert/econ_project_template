@@ -1,18 +1,73 @@
 # .gitignore file for economics projects
 # Authored by Reginald B. Hebert 15Apr2026
+#
+# Whitelist approach: ignore everything at the top level, then allow
+# code and config. Data, output, drafts and docs keep only their
+# folder structure (via .gitkeep), never their contents.
 
-# Main data  
-data/cleaned/
-data/raw/
+# ---- 1. Ignore everything at the top level ----
+/*
 
-# Temp data  
-data/temp
+# ---- 2. Allow code and project config ----
+!/.gitignore
+!/README.md
+!/LICENSE
+!/*.Rproj
+!/AGENTS.md
+!/CLAUDE.md
+!/.claude/
+!/code/
+!/renv.lock
+!/renv/
+!/.Rprofile
+!/_quarto.yml
 
-# Output 
-output/
+# ---- 3. Keep folder skeletons, ignore contents ----
+!/data/
+/data/**
+!/data/**/
+!/data/**/.gitkeep
 
-# drafts
-drafts/
+!/output/
+/output/**
+!/output/**/
+!/output/**/.gitkeep
 
-# MacOS
+!/drafts/
+/drafts/**
+!/drafts/**/
+!/drafts/**/.gitkeep
+
+!/docs/
+/docs/**
+!/docs/**/
+!/docs/**/.gitkeep
+
+# ---- 4. Inside code/: no logs or stray data ----
+/code/logs/*
+!/code/logs/.gitkeep
+/code/**/*.dta
+/code/**/*.csv
+/code/**/*.xlsx
+/code/**/*.rds
+/code/**/*.RData
+/code/**/*.parquet
+/code/**/*.html
+/code/**/*_files/
+/code/**/*_cache/
+
+# ---- 5. Anywhere ----
+# R / RStudio
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Renviron
+
+# Claude Code personal settings
+.claude/settings.local.json
+
+# macOS / Office
 .DS_Store
+._*
+~$*

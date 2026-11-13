@@ -1,0 +1,20 @@
+project:
+  type: default
+  output-dir: output/reports
+  execute-dir: project
+  render:
+    - code/*.qmd
+
+format:
+  html:
+    toc: true
+    code-fold: show
+    code-tools: true
+    embed-resources: true
+    df-print: kable
+
+execute:
+  echo: true
+  warning: true
+  message: false
+  freeze: auto
